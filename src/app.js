@@ -7,11 +7,22 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+  randomCard();
+};
+const buttonRandom = document.querySelector("button");
+buttonRandom.addEventListener("click", randomCard);
+
+function randomCard() {
   const suit = Math.floor(Math.random() * 4 + 1);
   const value = Math.floor(Math.random() * 12 + 1);
+
   const suitElementUP = document.querySelector(".iconUp");
   const valueElement = document.querySelector(".value");
   const suitElementDown = document.querySelector(".iconDown");
+
+  suitElementUP.classList = ["iconUp"];
+  valueElement.classList = ["value"];
+  suitElementDown.classList = ["iconDown"];
 
   if (suit == 1) {
     suitElementUP.innerHTML = "♠";
@@ -38,6 +49,7 @@ window.onload = function() {
     suitElementDown.innerHTML = "♦";
     suitElementDown.classList.add("diamond");
   }
+
   if (value == 1) {
     valueElement.innerHTML = "A";
   } else if (value == 10) {
@@ -49,10 +61,4 @@ window.onload = function() {
   } else {
     valueElement.innerHTML = value;
   }
-};
-const buttonRandom = document.querySelector("button");
-buttonRandom.addEventListener("click", reloadPage);
-
-function reloadPage() {
-  location.reload();
 }
