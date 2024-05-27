@@ -1,1 +1,65 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container-fluid {
+  background-color: green;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.card {
+  height: 80%;
+  width: 30%;
+  display: flex;
+  border-radius: 25px;
+}
+
+.iconUp,
+.iconDown {
+  height: 15%;
+  width: 100%;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.iconUp {
+  text-align: start;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.iconDown {
+  justify-content: end;
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+
+.value {
+  height: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.spade {
+  color: black;
+}
+
+.club {
+  color: black;
+}
+
+.heart {
+  color: red;
+}
+
+.diamond {
+  color: red;
+}
